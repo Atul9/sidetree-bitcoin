@@ -36,7 +36,7 @@ describe('BlockchainService', () => {
     });
   }, 20000); // Extended timeout as `beforeAll()` can take more than the default 5 seconds timeout.
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     // Make sure bitcored servie URL is valid before starting the tests.
     // NOTE: Code coverage run does not support `pending()` call in `beforeAll()`, so must do it in `beforeEach()`.
     if (!bitcoredServiceUrlIsValid) {
